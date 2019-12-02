@@ -11,12 +11,13 @@ public class TestException {
 		uc.killItNow(0); //java.lang.ArithmeticException:
 		uc.beyondBound(11);// java.lang.ArrayIndexOutOfBoundsException:
 		*/
-		/*
+		/**/
 		//checked Exception
-		CheckedException chk=new CheckedException();
-		chk.readItNow();
-		chk.testCustomException();
-		*/
+		CheckedException chk =new CheckedException();
+		//chk.readItNow();
+		//chk.testCustomException();
+		chk.checkedExcpCalled();
+		/**/
 		//System.out.println(s.length());//JVM exceptions
 		
 		
