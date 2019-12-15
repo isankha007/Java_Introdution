@@ -1,6 +1,7 @@
 package com.sankha.exception;
 import java.io.*;
 
+
 public class CheckedException {
        public void readItNow() {
     	  
