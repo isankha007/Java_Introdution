@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
+//https://mariadb.com/kb/en/library/about-mariadb-connector-j/
 
 public class MySQLAccess {
     private Connection connect = null;
