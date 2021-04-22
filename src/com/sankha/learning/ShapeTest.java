@@ -8,6 +8,14 @@ public class ShapeTest {
          t.draw();
          Shape r= new Circle();
          r.draw();
+         
+         try {
+        	 int i =10/0;
+			System.err.println(i);
+		} catch (ArithmeticException e) {
+			// TODO: handle exception
+			System.err.println("Error:"+ e.getMessage());
+		}
 	}
 
 }
