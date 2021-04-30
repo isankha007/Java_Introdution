@@ -1,12 +1,17 @@
 package com.sankha.learning;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
+import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.time.format.DateTimeFormatter;
+import java.time.ZonedDateTime;
 
-import sun.util.resources.LocaleData;
 
 public class DateItNow {
 
@@ -23,7 +28,14 @@ public class DateItNow {
         System.out.println(year);
         LocalDate localDateToday = LocalDate.now();
         System.out.println(localDateToday);
-
+        LocalDateTime localDatetime= LocalDateTime.now();
+        LocalDateTime timeszone=LocalDateTime.now(ZoneId.of("America/Los_Angeles"));
+        System.out.println(timeszone+"   Time "+localDatetime);
+        Period p=Period.between(localDateToday,LocalDate.of(2019, 02, 07) );
+        System.out.println(p);
+        DateTimeFormatter DtTimeFr=DateTimeFormatter.ofPattern("YYYY-MM-DD");
+        ZonedDateTime znDT=ZonedDateTime.now(); 
+        System.out.println(DtTimeFr.format(znDT));
 	}
 
 }
