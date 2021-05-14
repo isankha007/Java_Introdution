@@ -14,10 +14,11 @@ public class DatabaseOracleDemo {
 			//step2 create  the connection object  
 			Connection con=DriverManager.getConnection(  
 			"jdbc:oracle:thin:@localhost:1521:xe","system","oracle");  
-			  
+			  con.setAutoCommit(false);
 			//step3 create the statement object  
 			Statement stmt=con.createStatement();  
-			  
+			stmt.executeUpdate("INSERT INTO SANKHA.EMPLOYEE (EMPID, NAME, ADDRESS) VALUES ('104', 'Farhan', 'Bangalore')");
+			con.commit();  
 			//step4 execute query  
 			ResultSet rs=stmt.executeQuery("select * from sankha.Employee");  
 			while(rs.next())  
