@@ -6,10 +6,11 @@
  // Online Java Compiler
 // Use this editor to write, compile and run your Java code online
 
-class HelloWorld {
-    public static void main(String[] args) {
-        int quantity=7;
-        int actual=(quantity%5)+(quantity/5)*2;
-        System.out.println("Hello, World! "+actual);
-    }
-}
+    int actualQuantity;
+        actualQuantity = (quantity / 5) * 2;
+        if ((quantity % 5) >= 2) {
+            actualQuantity += 2;
+        } else {
+            actualQuantity += quantity % 5;
+        }
+        return actualQuantity;
